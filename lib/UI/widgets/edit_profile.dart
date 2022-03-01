@@ -76,7 +76,7 @@ class _EditProfileState extends State<EditProfile> {
                 ),
               ),
               SizedBox(height: 25),
-              TextField(hintText: "Full names", inputType: TextInputType.text),
+              TextField(hint  `Text: "Full names", inputType: TextInputType.text),
               SizedBox(height: 15),
               TextField(
                   hintText: "Email", inputType: TextInputType.emailAddress),
