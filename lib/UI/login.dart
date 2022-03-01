@@ -1,6 +1,12 @@
 
+import 'package:courses_app/UI/forgot_pass.dart';
+import 'package:courses_app/UI/signup.dart';
+import 'package:courses_app/UI/view_courses.dart';
 import 'package:flutter/material.dart';
+import 'package:courses_app/ui/widgets/btn.dart';
+import 'package:courses_app/ui/widgets/txt_field.dart';
 import 'package:get/get.dart';
+
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -25,13 +31,14 @@ class Login extends StatelessWidget {
                 ),
 
                 //**Adding space */
-                SizedBox(height: 18,),
+                SizedBox(
+                  height: 18,
+                ),
 
                 //** Text */
                 Text("Login",
                     style: Theme.of(context).textTheme.headline5!.copyWith(
                         fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-                 ],
 
               //** Adding space */
                 SizedBox(height: 30),
@@ -59,33 +66,45 @@ class Login extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Get.to(() => ForgotPass());
+                        },
                         child: Text(
                           "Forgot Password?",
                           style:
                           TextStyle(color: Color.fromRGBO(247, 153, 46, 1)),
                     )),
 
-
-
-
                   ],
                 ),
               //** Adding space */
-              sizedBox(height:18),
+              SizedBox(height:10),
               //*custom button */
-              Btn(
-                  text: 'Login',
-                onPressed: (){
-                    Get.to( => ViewCourses());
-                  )) //Run
-
-                }
-              )
+                         Btn(
+                     text: 'Login',
+                      onPressed: (){
+                       Get.to(() => ViewCourses());
+                      }),
+                      //space
+                SizedBox(height: 25),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => Signup());
+                  },
+                  child: RichText(text: TextSpan(
+                    text: "Don\'t have an account?", style: TextStyle(color: Colors.black87),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Sign up",
+                        style: TextStyle(color: Color.fromRGBO(230, 88, 62, 1))
+                      )
+                    ]
+                  )),
+                )
               ],
-            )
+              ),
+              ),
+            ),
         );
-      );
-    );
   }
   }

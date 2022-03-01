@@ -1,5 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 class Btn extends StatelessWidget {
@@ -18,6 +16,6 @@ class Btn extends StatelessWidget {
       backgroundColor: Color.fromRGBO(230, 88, 62, 1),
       padding: EdgeInsets.symmetric(horizontal: 16),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5))),
-    );
+    ));
   }
 }

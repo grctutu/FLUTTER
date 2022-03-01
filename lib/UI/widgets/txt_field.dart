@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 
@@ -30,9 +30,9 @@ class TxtField extends StatelessWidget {
           focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(15)),
           enabledBorder: UnderlineInputBorder(
-          borderSide: Borderside(color: Colors.white),
+          borderSide: BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(15)),
       ),
-    );
+    ));
   }
 }
